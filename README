@@ -3,6 +3,8 @@ To use it, add CM_SYSTEM as an environment variable or a defined variable in Fit
 
 Please see http://fitnesse.org/FitNesse.UserGuide.SourceCodeControl
 
+Abhishek is learning git ...
+
 Put the fitnesse-git-plugin.jar in a folder called "plugins" next to the fitnesse.jar
   |---fitnesse.jar
   |---plugins
