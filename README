@@ -5,6 +5,8 @@ Please see http://fitnesse.org/FitNesse.UserGuide.SourceCodeControl
 
 Abhishek is learning git ...
 
+How do i modify one line?
+
 Put the fitnesse-git-plugin.jar in a folder called "plugins" next to the fitnesse.jar
   |---fitnesse.jar
   |---plugins
