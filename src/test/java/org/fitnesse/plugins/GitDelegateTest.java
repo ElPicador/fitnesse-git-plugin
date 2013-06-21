@@ -1,6 +1,6 @@
 package org.fitnesse.plugins;
 
-import fitnesse.components.CommandRunner;
+import fitnesse.testsystems.CommandRunner;
 import org.hamcrest.core.IsNot;
 import org.junit.Assert;
 import org.junit.Test;
@@ -9,13 +9,16 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
+
 import java.net.InetAddress;
 import java.text.DateFormat;
 import java.util.Date;
 
-import static junit.framework.Assert.*;
-import static org.hamcrest.core.Is.*;
-import static org.mockito.Mockito.*;
+import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.assertTrue;
+import static org.hamcrest.core.Is.is;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 
 @RunWith(MockitoJUnitRunner.class)
