@@ -29,7 +29,7 @@
         <dependency>
             <groupId>org.fitnesse</groupId>
             <artifactId>fitnesse</artifactId>
-            <version>20100303</version>
+            <version>20130530</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>

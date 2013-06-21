@@ -1,7 +1,8 @@
 package org.fitnesse.plugins;
 
 import fitnesse.ComponentFactory;
-import fitnesse.components.CommandRunner;
+import fitnesse.testsystems.CommandRunner;
+
 import java.io.FileInputStream;
 import java.net.InetAddress;
 import java.text.DateFormat;

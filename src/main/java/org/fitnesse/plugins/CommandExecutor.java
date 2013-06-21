@@ -1,6 +1,6 @@
 package org.fitnesse.plugins;
 
-import fitnesse.components.CommandRunner;
+import fitnesse.testsystems.CommandRunner;
 
 public class CommandExecutor {
   public CommandRunner exec(String command) {
