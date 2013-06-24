@@ -17,7 +17,7 @@ public class GitDelegate {
     private CommandExecutor executor = new CommandExecutor();
 
     public void update(String file) throws Exception {
-        executor.exec("git add " + file);
+        executor.exec(gitPath() + " add " + file);
     }
 
     public void delete(String file) throws Exception {
@@ -25,30 +25,16 @@ public class GitDelegate {
     }
 
     public void commit() throws Exception {
-        if (shouldAmend()) {
-            executor.exec(gitPath() + " commit --amend --message \"" + commitMessage() + "\"");
-        }
-        else {
-            COMMIT_TOKEN = freshToken();
-            executor.exec(gitPath() + " commit --message \"" + commitMessage() + "\"");
-        }
+        executor.exec(gitPath() + " commit -am " + commitMessage());
     }
 
-    private boolean shouldAmend() throws Exception {
-        CommandRunner runner = executor.exec(gitPath() + " log -1 --pretty=oneline");
-        runner.run();
-        return runner.getOutput().contains(commitMessage());
+    public void push() throws Exception {
+      executor.exec(gitPath() + " push");
     }
+
 
     protected String commitMessage() {
-        try {
-            if (MACHINE_NAME == null) MACHINE_NAME = InetAddress.getLocalHost().getHostName();
-            if (COMMIT_TOKEN == null) COMMIT_TOKEN = freshToken();
-        }
-        catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-        return "FitNesse auto-commit from " + MACHINE_NAME + " with token [" + COMMIT_TOKEN + "]";
+        return "FitNesse";
     }
 
     private String freshToken() {

@@ -10,6 +10,7 @@ public class GitScm {
   public static void cmUpdate(String file, String payload) throws Exception {
     gitDelegate.update(file);
     gitDelegate.commit();
+    gitDelegate.push();
   }
 
   public static void cmEdit(String file, String payload) throws Exception {
@@ -18,6 +19,7 @@ public class GitScm {
   public static void cmDelete(String file, String payload) throws Exception {
     gitDelegate.delete(file);
     gitDelegate.commit();
+    gitDelegate.push();
   }
 
   public static void cmPreDelete(String file, String payload) throws Exception {
